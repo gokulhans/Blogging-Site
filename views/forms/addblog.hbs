@@ -1,0 +1,53 @@
+{{!-- <a href="/blogs/" class="btn btn-primary m-3 text-white"><strong>Users Home</strong></a>
+
+<div class="center">
+    <div class="center-div">
+        <form class="width container mt-3" action="/blogs/add" method="post">
+            <h3 class="mb-3">Add</h3>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp"
+                    placeholder="Name..">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div> --}}
+
+<div class="center px-8 md:px-32">
+    <form class="w-full" action="/blogs/add/" method="post" >
+        <div class="mb-6">
+            <label for="title" class="block mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Blog
+                Title</label>
+            <input type="text" id="title" name="title"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Blog name.." required>
+            <input type="file" id="title" name="title" 
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Blog name..">
+                
+            <input type="text" id="title" name="author" disabled value="{{user.user.name}}"
+                class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Blog name..">
+        </div>
+
+        <div class="mb-6">
+            <label for="message" class="block mb-2 text-md font-medium text-gray-900 dark:text-gray-400"> Content </label>
+            <textarea id="message" name="content" rows="4"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Body of blog..."></textarea>
+        </div>
+
+        <div class="mb-6">
+            <label for="category" class="block mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                Category </label>
+            <input type="text" id="category" name="category"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Blog catagory..." required>
+        </div>
+
+        <button type="submit"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+
+    </form>
+</div>

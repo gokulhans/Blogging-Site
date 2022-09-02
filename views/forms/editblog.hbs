@@ -1,0 +1,39 @@
+
+
+<div class="center px-8 md:px-32">
+    <form class="w-full" action="/blogs/edit/" method="post" >
+        <div class="mb-6">
+            <label for="title" class="block mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Blog
+                Title</label>
+            <input type="text" id="title" name="title" value="{{data.title}}" 
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required>
+
+            <input type="text" name="author" disabled value="{{data.author}}"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Blog name..">
+        </div>
+
+        <div class="mb-6">
+            <label for="message" class="block mb-2 text-md font-medium text-gray-900 dark:text-gray-400"> Content </label>
+            <textarea id="message" name="content" rows="4"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Body of blog...">{{data.content}}</textarea>
+        </div>
+
+        <div class="mb-6">
+            <label for="category" class="block mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                Category </label>
+            <input type="text" id="category" name="category" value="{{data.category}}"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Blog catagory..." required>
+            <input type="text" name="id" value="{{data._id}}" hidden 
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Blog catagory...">
+        </div>
+
+        <button type="submit"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+
+    </form>
+</div>
